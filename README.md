@@ -8,7 +8,7 @@ The helper to distribute the small program with source file written in C/C++/Obj
 
 ## Usage
 
-1. Copy the shell script template (`cornercut-compile_header.sh` or  `cornercut-compile_header-short.sh`) with the project name with the appropriate filename extention (suffix). The extenstion shoule be `.(language-default-extension).sh`. Refer [GCC manual](https://gcc.gnu.org/onlinedocs/gcc/Overall-Options.html) for the language default extensions. Difference between `cornercut-compile_header.sh` and `cornercut-compile_header-short.sh` is just if it includes the verbose comments or not.
+1. Copy the shell script template (`cornercut-compile_header.sh` or  `cornercut-compile_header-short.sh`) with the project name with the appropriate filename extension (suffix). The extension should be `.(language-default-extension).sh`. Refer [GCC manual](https://gcc.gnu.org/onlinedocs/gcc/Overall-Options.html) for the language default extensions. Difference between `cornercut-compile_header.sh` and `cornercut-compile_header-short.sh` is just if it includes the verbose comments or not.
 
 ```sh
 % cp -ai 'cornercut-compile_header.sh'       'example.cc.sh'
@@ -37,14 +37,14 @@ If you want to doing the compile code only, give non-zero value to the environme
 % ls -l example
 ```
 
-If you want to obtain the pure sourve doing the compile code only, give non-zero value to the environmental variables: `keep_src`.
+If you want to obtain the pure source doing the compile code only, give non-zero value to the environmental variables: `keep_src`.
   
 ```sh
 % env autorun=0 keep_src=1 ./example.cc.sh
 % ls -l example.cc
 ```
 
-When the file with same filename as the compiled binary (`example` for the example above, or `a.out` in some case.), this script will be aborted to avoide the overriding existing file. If you do not care the override, give non-zero value to the environmental variables: `force_build`.
+When the file with same filename as the compiled binary (`example` for the example above, or `a.out` in some case.), this script will be aborted to avoid the overriding existing file. If you do not care the override, give non-zero value to the environmental variables: `force_build`.
 
 ```sh
 % ls -l example
@@ -55,7 +55,7 @@ These variables can be hard-coded at the beginning of the scripts.(`example.cc.s
 
 ## Examples
 
-- Sample codes/scripts exsists under `example` directory. This example file includes source codes, which are written in C, C++, Objective-C, Objective-C++ and fortran and selected by compiler pre-processor, to say "Hello world!" with listing the comand-line arguments. Language selection will be done based on the suffix of the filename.
+- Sample codes/scripts exists under `example` directory. This example file includes source codes, which are written in C, C++, Objective-C, Objective-C++ and fortran and selected by compiler pre-processor, to say "Hello world!" with listing the command-line arguments. Language selection will be done based on the suffix of the filename.
 
 ```
 % ls -l example/
@@ -122,7 +122,7 @@ Hello, World! (Objective-C++)
  3 arg3
 ```
 
-- When the programing language can not be identified from suffix, it will be compiled as source code in c++, and then run with arguments.
+- When the programming language can not be identified from suffix, it will be compiled as source code in c++, and then run with arguments.
 
 ```c++:(default)-->a.out
 % ./example/cornercut-compile-example.sh arg1 arg2 arg3
